@@ -7,13 +7,13 @@ const chefs = require('./data/chefs.json');
 
 app.use(cors())
 
-app.get('/', (req, res) => {
-  res.send('Chef Recipe Hunter Running!')
-})
-
 app.get('/chefs', (req, res) => {
   res.send(chefs);
 })
+
+app.get("/", (req, res) => {
+  res.send("Chef Recipe Hunter Running!");
+});
 
 app.listen(port, () => {
   console.log(`Chef Recipe Hunter on port ${port}`)
